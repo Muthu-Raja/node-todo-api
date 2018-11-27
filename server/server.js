@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 let {mongoose} = require('./db/mongoose');
-let {Todo} = require('./db/todo');
-let {User} = require('./db/user');
+let {Todo} = require('./models/todo');
+let {User} = require('./models/user');
 
 let app = express();
 
@@ -26,3 +26,5 @@ if (!module.parent){
     console.log('Started on port 3000');
   });
 }
+
+module.exports.app = app;
